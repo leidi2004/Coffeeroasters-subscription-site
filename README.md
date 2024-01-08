@@ -1,5 +1,4 @@
-# React + Vite
+# Coffeeroasters subscription site
 
-This template provides a minimal setup to get React working in Vite with eslint and prettier.
 
 
