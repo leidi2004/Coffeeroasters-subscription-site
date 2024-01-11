@@ -1,30 +1,45 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
 
-    &__icon{
-        width: 10%;
-    }
+	&__container {
+		@media (max-width: 425px) {
+			width: 55%;
+		}
+	}
 
-    &__menu_hidden{
-        display: none;
+	&__icon {
+		@media (max-width: 425px) {
+			width: 100%;
+		}
+	}
 
-    }
+	&__menu_hidden {
+		display: none;
+	}
 
-    &__menu_display{
-
-    }
+	&__menu_display {
+	}
 }
 
-.button{
-    width: 8%;
-    
-    padding: 0.3rem;
+.button {
+    display: none;
 
-    &__lines{
+    @media (max-width: 425px){
         display: block;
-        background-color: black;
-        height: 2.4px;
-        margin-bottom: 0.2rem;
+        width: 30px;
+	    padding: 0.3rem;
+        background-color: #fff;
+        border: none;
     }
+	
+
+	&__lines {
+		display: block;
+		background-color: black;
+		height: 3px;
+		margin-bottom: 0.2rem;
+        border-radius: 0.4rem;
+	}
 }
