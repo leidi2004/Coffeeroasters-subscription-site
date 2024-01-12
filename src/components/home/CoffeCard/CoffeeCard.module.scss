@@ -1,0 +1,26 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    &__img{
+        width: 60%;
+        max-width: 150px;
+    }
+
+    &__title, &__description{
+        text-align: center;
+        color: #333d4b;
+    }
+
+    &__title{
+        font-size: 1.7rem;
+    }
+
+    &__description{
+        line-height: 1.3;
+    }
+}

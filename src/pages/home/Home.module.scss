@@ -1,0 +1,111 @@
+.section {
+	margin-bottom: 4rem;
+	padding: 4.4rem 1rem;
+	border-radius: 0.6rem;
+
+	@media (max-width: 425px) {
+		background-image: url(../../assets//img/home//mobile/image-hero-coffeepress.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+.content {
+	&__title,
+	&__text {
+		text-align: center;
+	}
+
+	&__title {
+		color: #f0f1f1;
+		margin-bottom: 1.2rem;
+		font-size: 2.2rem;
+	}
+
+	&__text {
+		font-size: 0.9rem;
+		color: #bec5c5;
+		line-height: 1.5;
+	}
+}
+
+.coffeeList {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    gap: 2.5rem;
+	margin-bottom: rem;
+
+	@media (min-width: 1024px) {
+		flex-direction: row;
+	}
+
+	&__title {
+		display: block;
+		font-size: 2.3rem;
+		color: #052b2c;
+		text-align: center;
+	}
+}
+
+.titleContainer{
+	margin-bottom: 2rem;
+}
+
+.titleShadow {
+	width: 80%;
+	padding: 1.5rem;
+	position: absolute;
+    margin: auto;
+	background-color: rgb(254, 252, 247);
+	background: linear-gradient(0deg,rgba(254, 252, 247, 0.8044818269104517) 25%,rgba(254, 247, 247, 0) 100%);
+}
+
+.article, .cardContainer{
+	padding: 2rem 1.5rem;
+	width: 90%;
+	margin: auto;
+}
+
+.article{
+	background-color: #333d4b;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	text-align: center;
+	height: fit-content;
+
+	&__title{
+		color: #f0f1f1;
+		margin-bottom: 1rem;
+	}
+
+	&__text{
+		color: #bec5c5;
+		line-height: 1.6;
+	}
+}
+
+.cardContainer{
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	background-image: url(../../assets/img/plan/mobile/bg-order-summary.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30rem;
+}
+
+.wrapper{
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.reasonsSection{
+	height: 78rem;
+	margin-block: 1.5rem;
+}
+

@@ -1,0 +1,47 @@
+.footer{
+    background-color: #333d4b;
+    color: #fff;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__logo{
+        margin-bottom: 1.5rem;
+    }
+
+    &__nav{
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 2;
+        margin-bottom: 1rem;
+    }
+
+    &__logoContainer{
+        display: flex;
+        gap: 1.8rem;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+.nav__link{
+    color: #9c9e9e;
+    font-size: 700;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    &:hover{
+        color: #bec5c5;
+        transition: color 0.4s 0.3s ease-in;
+    }
+}
+
+path:hover{
+    fill: #fdd6ba;
+    transition: all 0.8s 0.1s ease-in;
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { AboutUs } from "./pages/AboutUs";
-import { CreatePlan } from "./pages/CreatePlan";
+import { Home } from "./pages/home/Home";
+import { AboutUs } from "./pages/about/AboutUs";
+import { CreatePlan } from "./pages/createplan/CreatePlan";
 
 
 function App() {
