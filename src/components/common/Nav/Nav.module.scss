@@ -5,29 +5,47 @@
     margin-bottom: 2rem;
 
 	&__container {
-		@media (max-width: 425px) {
+		@media (max-width: 767px) {
 			width: 55%;
 		}
 	}
 
 	&__icon {
-		@media (max-width: 425px) {
+		max-width: 210px;
+		@media (max-width: 767px) {
 			width: 100%;
 		}
 	}
 
+	&__links{
+		display: flex;
+		gap: 1rem;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__link{
+		font-size: 0.8rem;
+		color: #9c9e9e;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
 	&__menu_hidden {
-		display: none;
 	}
 
 	&__menu_display {
+
+		
 	}
 }
 
 .button {
     display: none;
 
-    @media (max-width: 425px){
+    @media (max-width: 767px) {
         display: block;
         width: 28px;
 	    padding: 0.3rem;
