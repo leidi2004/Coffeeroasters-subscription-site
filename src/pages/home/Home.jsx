@@ -117,9 +117,9 @@ export const Home = () => {
 				</div>
 			</section>
 			<section>
-				<Steps/>
+				<Steps />
 			</section>
-			<ButtonCreatePlan/>
+			<ButtonCreatePlan />
 			<Footer />
 		</main>
 	);

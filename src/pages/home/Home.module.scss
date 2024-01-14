@@ -45,9 +45,10 @@
 }
 
 .test{
-	position: relative;
-	border: solid 2px red;
-	height: fit-content;
+	@media (min-width: 768px) and (max-width: 1023px){
+		border: 1px solid pink;
+		height: 160vh;
+	}
 }
 
 .coffeeList {
@@ -59,8 +60,7 @@
 
 	@media (min-width: 768px) and (max-width: 1023px){
 		position: absolute;
-		top: 100%;
-
+        top: 101%;
 	}
 
 	@media (min-width: 1024px) {
@@ -74,13 +74,14 @@
 		text-align: center;
 
 		@media (min-width: 768px) and (max-width: 1023px){
-			font-size: 5rem;
+			font-size: 7rem;
 		}
 		@media (min-width: 1024px) {
 			font-size: 10rem;
 		}
 	}
 }
+
 
 .titleContainer {
 	margin-bottom: 2rem;
@@ -91,6 +92,7 @@
 	padding: 1.4rem;
 	position: absolute;
 	margin: auto;
+	
 	background-color: rgb(254, 252, 247);
 	background: linear-gradient(
 		0deg,
@@ -98,7 +100,7 @@
 		rgba(254, 247, 247, 0) 100%
 	);
 	@media (min-width: 768px) and (max-width: 1023px){
-		padding: 3rem;
+		padding: 4rem;
 	}
 	@media (min-width: 1024px) {
 		padding: 6rem;
@@ -152,3 +154,4 @@
 	height: 78rem;
 	margin-block: 1.5rem;
 }
+
