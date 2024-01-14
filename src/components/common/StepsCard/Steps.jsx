@@ -1,5 +1,5 @@
-import {PropTypes} from 'prop-types'
-import styles from './Steps.module.scss'
+import { PropTypes } from 'prop-types';
+import styles from './Steps.module.scss';
 export const Steps = () => {
 	const steps = [
 		{
@@ -24,12 +24,21 @@ export const Steps = () => {
 		},
 	];
 	return (
-		<div className={styles.containerCards}>
-      <h3 className={styles.containerCards__title}>How it works</h3>
-			{steps.map(step => (
-				<StepCard step={step} key={step.number} />
-			))}
-		</div>
+		<section className={styles.section}>
+			<h3 className={styles.section__title}>How it works</h3>
+			<div className={styles.container}>
+				<span className={styles.container__circle}></span>
+				<span className={styles.container__line}></span>
+				<span className={styles.container__circle}></span>
+				<span className={styles.container__line}></span>
+				<span className={styles.container__circle}></span>
+			</div>
+			<div className={styles.containerCards}>
+				{steps.map(step => (
+					<StepCard step={step} key={step.number} />
+				))}
+			</div>
+		</section>
 	);
 };
 
@@ -44,9 +53,9 @@ const StepCard = ({ step }) => {
 };
 
 StepCard.propTypes = {
-  step: PropTypes.shape({
-    number: PropTypes.string.isRequired,
-    step: PropTypes.string.isRequired,
-    instruction: PropTypes.string.isRequired
-  })
-}
+	step: PropTypes.shape({
+		number: PropTypes.string.isRequired,
+		step: PropTypes.string.isRequired,
+		instruction: PropTypes.string.isRequired,
+	}),
+};

@@ -1,33 +1,58 @@
-.containerCards{
-    margin-top: 6rem;
-    color: #9c9e9e;
-
+.section{
+    margin-block: 6rem;
     &__title{
         text-align: center;
-        margin-bottom: 1.7rem;
-        font-size: 1.5rem;
+        margin-bottom: 3rem;
+        font-size: 1.7rem;
+        color: #747979;
+
+        @media (min-width: 767px){
+            text-align: left;
+        }   
+    }
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @media (min-width: 767px){
+        flex-direction: row;
     }
 }
 
 .card{
     text-align: center;
     padding: 0.7rem;
+
+    @media (min-width: 767px){
+        height: 400px;
+        text-align: left;
+    }
     &__number{
 	    font-family: 'Fraunces', serif;
         color: #fdd6ba;
         font-size: 5rem;
+        margin-bottom: 1rem;
     }
 
     &__title, &__text{
         color: #333d4b;
+        @media (min-width: 767px){
+            height: 100px;
+    
+        }
     }
 
     &__title{
-        font-size: 1.7rem;
-        margin-bottom: 1rem;
+        font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+        margin-bottom: 1.5rem;
     }
 
     &__text{
+        font-size: clamp(1rem, 1vw, 1.3rem);
         line-height: 1.5;
     }
 }
@@ -36,3 +61,28 @@
     width: 1000%;
     height: 30rem;
 }
+
+.container{
+    display: none;
+
+    @media (min-width: 767px){
+        display: block;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    &__circle{
+        display: inline-block;
+        padding: 1.2rem;
+        border: solid 3px #0e8784;
+        border-radius: 50%;
+    }
+    &__line{
+        display: inline-block;
+        width: 30%;
+        text-align: center;
+        border: solid #fdd6ba 1px;
+        
+    }
+}
+

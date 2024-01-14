@@ -119,7 +119,9 @@ export const Home = () => {
 			<section>
 				<Steps />
 			</section>
-			<ButtonCreatePlan />
+			<div className={styles.buttonContainer}>
+				<ButtonCreatePlan />
+			</div>
 			<Footer />
 		</main>
 	);

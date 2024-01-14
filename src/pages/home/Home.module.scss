@@ -26,9 +26,21 @@
 }
 
 .content {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: 767px) {
+		width: 60%;
+		padding: 1rem;
+	}
+
 	&__title,
 	&__text {
 		text-align: center;
+
+		@media (min-width: 767px) {
+			text-align: left;
+		}
 	}
 
 	&__title {
@@ -46,8 +58,7 @@
 
 .test{
 	@media (min-width: 768px) and (max-width: 1023px){
-		border: 1px solid pink;
-		height: 160vh;
+		height: 170vh;
 	}
 }
 
@@ -60,7 +71,7 @@
 
 	@media (min-width: 768px) and (max-width: 1023px){
 		position: absolute;
-        top: 101%;
+        top: 125%;
 	}
 
 	@media (min-width: 1024px) {
@@ -154,4 +165,6 @@
 	height: 78rem;
 	margin-block: 1.5rem;
 }
+
+
 
