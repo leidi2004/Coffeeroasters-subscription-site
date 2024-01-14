@@ -4,7 +4,21 @@
 	border-radius: 0.6rem;
 
 	@media (max-width: 425px) {
-		background-image: url(../../assets//img/home//mobile/image-hero-coffeepress.jpg);
+		background-image: url(../../assets/img/home/mobile/image-hero-coffeepress.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	@media (min-width: 426px) and (max-width: 1023px) {
+		background-image: url(../../assets/img/home/tablet/image-hero-coffeepress.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	@media (min-width: 1024px){
+		background-image: url(../../assets/img/home/desktop/image-hero-coffeepress.jpg);
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -30,13 +44,24 @@
 	}
 }
 
+.test{
+	position: relative;
+	border: solid 2px red;
+	height: fit-content;
+}
+
 .coffeeList {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    gap: 2.5rem;
-	margin-bottom: rem;
+	gap: 2.5rem;
+
+	@media (min-width: 768px) and (max-width: 1023px){
+		position: absolute;
+		top: 100%;
+
+	}
 
 	@media (min-width: 1024px) {
 		flex-direction: row;
@@ -47,47 +72,66 @@
 		font-size: 2.3rem;
 		color: #052b2c;
 		text-align: center;
+
+		@media (min-width: 768px) and (max-width: 1023px){
+			font-size: 5rem;
+		}
+		@media (min-width: 1024px) {
+			font-size: 10rem;
+		}
 	}
 }
 
-.titleContainer{
+.titleContainer {
 	margin-bottom: 2rem;
 }
 
 .titleShadow {
-	width: 80%;
-	padding: 1.5rem;
+	width: 90%;
+	padding: 1.4rem;
 	position: absolute;
-    margin: auto;
+	margin: auto;
 	background-color: rgb(254, 252, 247);
-	background: linear-gradient(0deg,rgba(254, 252, 247, 0.8044818269104517) 25%,rgba(254, 247, 247, 0) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(254, 252, 247, 0.8044818269104517) 25%,
+		rgba(254, 247, 247, 0) 100%
+	);
+	@media (min-width: 768px) and (max-width: 1023px){
+		padding: 3rem;
+	}
+	@media (min-width: 1024px) {
+		padding: 6rem;
+		width: 92%;
+	}
 }
 
-.article, .cardContainer{
+.article,
+.cardContainer {
 	padding: 2rem 1.5rem;
 	width: 90%;
 	margin: auto;
 }
 
-.article{
+.article {
 	background-color: #333d4b;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
 	text-align: center;
 	height: fit-content;
 
-	&__title{
+	&__title {
 		color: #f0f1f1;
 		margin-bottom: 1rem;
 	}
 
-	&__text{
+	&__text {
 		color: #bec5c5;
 		line-height: 1.6;
 	}
 }
 
-.cardContainer{
+.cardContainer {
 	border-bottom-left-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
 	background-image: url(../../assets/img/plan/mobile/bg-order-summary.png);
@@ -96,7 +140,7 @@
 	height: 30rem;
 }
 
-.wrapper{
+.wrapper {
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
@@ -104,8 +148,7 @@
 	gap: 1rem;
 }
 
-.reasonsSection{
+.reasonsSection {
 	height: 78rem;
 	margin-block: 1.5rem;
 }
-

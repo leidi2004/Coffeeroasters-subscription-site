@@ -5,8 +5,10 @@ export const CoffeeCard = ({ coffee }) => {
 	return (
 		<div className={styles.card}>
 			<img src={coffee.img} alt='coffee image' className={styles.card__img} />
+			<div>
 			<h3 className={styles.card__title}>{coffee.title}</h3>
 			<p className={styles.card__description}>{coffee.description}</p>
+			</div>
 		</div>
 	);
 };

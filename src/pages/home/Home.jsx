@@ -87,7 +87,7 @@ export const Home = () => {
 					<ButtonCreatePlan />
 				</div>
 			</section>
-			<section>
+			<section className={styles.test}>
 				<div className={styles.titleContainer}>
 					<div className={styles.titleShadow}></div>
 					<h3 className={styles.coffeeList__title}>our collection</h3>
