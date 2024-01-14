@@ -6,6 +6,7 @@
     gap: 1rem;
     padding: 2rem 1rem;
     height: 300px;
+    width: 70vw;
     background-color: #0e8784;
     border-radius: 0.4rem;
 
@@ -15,6 +16,7 @@
     }
 
     &__title, &__description{
+        text-align: center;
         color: #f0f1f1;
     }
 
@@ -23,7 +25,6 @@
     }
 
     &__description{
-        text-align: center;
         line-height: 1.3;
     }
 }
