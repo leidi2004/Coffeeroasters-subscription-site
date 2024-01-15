@@ -1,7 +1,7 @@
 .footer {
 	background-color: #333d4b;
 	color: #fff;
-	padding: 3rem 1rem;
+	padding: 3rem;
 	margin-top: 4rem;
 	display: flex;
 	flex-direction: column;
@@ -9,10 +9,15 @@
 	align-items: center;
 	gap: 1rem;
 
+	@media (min-width:1023px) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	&__logo {
-        @media (min-width: 767px) and (max-width: 1024px) {
+        @media (min-width: 767px) {
             align-self: center;
-            margin: auto;
         }
 	}
 
@@ -27,6 +32,9 @@
 
 		@media (min-width: 767px) and (max-width:1024px){
             margin-bottom: 1.5rem;
+		}
+
+		@media (min-width: 1024px){
 			flex-direction: row;
 		}
 	}
@@ -36,6 +44,10 @@
 		gap: 1.8rem;
 		justify-content: center;
 		align-items: center;
+
+		@media (min-width: 1024px) {
+            align-self: center;
+        }
 	}
 }
 
