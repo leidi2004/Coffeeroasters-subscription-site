@@ -29,8 +29,9 @@
 	display: flex;
 	flex-direction: column;
 
-	@media (min-width: 767px) {
+	@media (min-width: 767px){
 		width: 60%;
+		max-width: 450px;
 		padding: 1rem;
 	}
 
@@ -58,7 +59,10 @@
 
 .test{
 	@media (min-width: 768px) and (max-width: 1023px){
-		height: 170vh;
+		height: 230vh;
+	}
+	@media (min-width: 1024px){
+		height: 80vh;
 	}
 }
 
@@ -68,14 +72,17 @@
 	justify-content: center;
 	align-items: center;
 	gap: 2.5rem;
+	
 
 	@media (min-width: 768px) and (max-width: 1023px){
 		position: absolute;
-        top: 125%;
+        top: 690px;
 	}
 
 	@media (min-width: 1024px) {
 		flex-direction: row;
+		position: absolute;
+        top: 700px;
 	}
 
 	&__title {
@@ -114,7 +121,7 @@
 		padding: 4rem;
 	}
 	@media (min-width: 1024px) {
-		padding: 6rem;
+		padding: 5rem;
 		width: 92%;
 	}
 }
@@ -132,7 +139,6 @@
 	border-top-right-radius: 0.5rem;
 	text-align: center;
 	height: fit-content;
-
 	&__title {
 		color: #f0f1f1;
 		margin-bottom: 1rem;
@@ -142,6 +148,13 @@
 		color: #bec5c5;
 		line-height: 1.6;
 	}
+
+	@media (min-width: 767px) {
+		background-image: url(../../assets/img/plan/mobile/bg-order-summary.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 }
 
 .cardContainer {
@@ -151,19 +164,35 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 30rem;
+	
+	@media (min-width: 1024px) {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 .wrapper {
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	gap: 0.8rem;
+	margin: auto;
+	
+	@media (min-width: 1024px) {
+		flex-direction: row;
+		
+	}
 }
 
 .reasonsSection {
 	height: 78rem;
 	margin-block: 1.5rem;
+	@media (min-width: 1024px) {
+		height: fit-content;
+	}
+
 }
 
 

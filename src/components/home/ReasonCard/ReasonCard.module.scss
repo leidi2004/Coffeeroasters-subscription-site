@@ -10,6 +10,11 @@
     background-color: #0e8784;
     border-radius: 0.4rem;
 
+    @media (min-width: 1024px) {
+        max-width: 270px;
+        
+    }
+
     &__img{
         width: 30%;
         max-width: 100px;
