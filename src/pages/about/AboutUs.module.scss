@@ -1,0 +1,96 @@
+.section {
+	margin-bottom: 3rem;
+
+    &__container, &__CommitmentImg, &__CoffeeImg, &__QualityContent{
+		width: 100%;
+        background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border-radius: 0.7rem;
+    }
+
+	&__container {
+		padding: 8rem 2rem;
+		background-image: url(../../assets/img/about/mobile/image-hero-whitecup.jpg);
+		color: #f0f1f1;
+
+		@media (min-width: 765px) and (max-width: 1023px) {
+			background-image: url(../../assets/img/about/tablet/image-hero-whitecup.jpg);
+		}
+        @media (min-width: 1024px) {
+			background-image: url(../../assets/img/about/desktop/image-hero-whitecup.jpg);
+		}
+	}
+
+	&__title,
+	&__text, &__titleDark,
+	&__textDark {
+		text-align: center;
+	}
+
+	&__title, &__titleDark{
+		font-size: clamp(1.8rem, 5vw, 2.3rem);
+		margin-bottom: 2rem;
+	}
+
+	&__text, &__textDark{
+		line-height: 1.5;
+	}
+
+	&__titleDark{
+		color: #052b2c;
+	}
+
+	&__textDark {
+		color: #333d4b;
+		font-weight: lighter;
+	}
+
+    &__CommitmentImg{
+        height: 200vh;
+		background-image: url(../../assets/img/about/mobile/image-commitment.jpg);
+        margin-bottom: 3.5rem;
+		@media (min-width: 765px) and (max-width: 1023px) {
+			background-image: url(../../assets/img/about/tablet/image-commitment.jpg);
+		}
+        @media (min-width: 1024px) {
+			background-image: url(../../assets/img/about/desktop/image-commitment.jpg);
+		}
+    }
+
+	&__CoffeeImg{
+		width: 80%;
+		padding: 6rem 0;
+		margin: 1rem auto;
+		background-image: url(../../assets/img/about/mobile/image-quality.jpg);
+		color: #f0f1f1;
+		box-shadow: #343e4c 0px 2px 5px -1px, #343e4c 0px 1px 3px -1px;
+		position: absolute;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+		@media (min-width: 765px) and (max-width: 1023px) {
+			background-image: url(../../assets/img/about/tablet/image-quality.jpg);
+		}
+        @media (min-width: 1024px) {
+			background-image: url(../../assets/img/about/desktop/image-quality.jpg);
+		}
+	}
+
+	&__QualityContent{
+		color: #f0f1f1;
+		padding: 9.5rem 1rem 3rem 1rem;
+		background-image: url(../../assets/img/about/mobile/bg-quality.png);
+		@media (min-width: 765px) and (max-width: 1023px) {
+			background-image: url(../../assets/img/about/tablet/bg-quality.png);
+		}
+        @media (min-width: 1024px) {
+			background-image: url(../../assets/img/about/desktop/bg-quality.png)
+			;
+		}
+	}
+
+}
+
+.section:nth-child(3), .section:nth-child(4){
+	margin-bottom: 8rem;
+}
