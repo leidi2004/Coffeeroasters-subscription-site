@@ -39,9 +39,8 @@
 	}
 
 	&__text, &__textDark{
-		line-height: 1.5;
-		font-size: clamp(1.2rem, 1.4vw, 1.5rem);
-
+		line-height: 1.6;
+		font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 	}
 
 	&__titleDark{
@@ -52,8 +51,11 @@
 	&__textDark {
 		color: #333d4b;
 		font-weight: lighter;
-		@media (min-width: 766px) {
+		width: 100%;
+		@media (min-width: 766px) and (max-width: 1023px){
 			max-width: 300px;
+		}
+		@media (min-width: 1024px){
 		}
 
 	}
@@ -65,16 +67,21 @@
 		@media (min-width: 766px) and (max-width: 1023px) {
 			background-image: url(../../assets/img/about/tablet/image-commitment.jpg);
 			background-position: top;
-			max-height: 510px;
+			height: 120vh;
 			margin: auto;
+			width: 50%;
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/image-commitment.jpg);
-		}
-		@media (min-width: 766px){
-			width: 50%;
+			height: 130vh;
+			width: 40%;
 		}
     }
+
+	&__CommitmentDescription{
+		flex-basis: 50%;
+		flex-grow: 1;
+	}
 
 	&__CoffeeImg{
 		width: 80%;
@@ -93,6 +100,9 @@
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/image-quality.jpg);
+			width: 30%;
+			padding: 14rem 0;
+			left: 78%;
 		}
 	}
 
@@ -106,8 +116,9 @@
 			padding-top: 14rem;
 		}
         @media (min-width: 1024px) {
-			background-image: url(../../assets/img/about/desktop/bg-quality.png)
-			;
+			text-align: left;
+			background-image: url(../../assets/img/about/desktop/bg-quality.png);
+			padding: 8rem 38rem 8rem 10rem;
 		}
 	}
 
@@ -118,11 +129,20 @@
 	}
 
 	&__commitment{
-		@media (min-width: 766px) {
-			display: flex;
-			gap: 2.2rem;
+		padding: 2rem;
+		display: flex;
+		gap: 2.2rem;
+		flex-direction: column;
+		@media (min-width: 766px){
+			flex-direction: row;
+			text-align: left;
+		}
+		@media (min-width: 766px) and (max-width: 1023px){
 			text-align: left;
 			align-items: center;
+		}
+		@media (min-width: 1024px){
+			align-items: flex-start;
 		}
 	}
 

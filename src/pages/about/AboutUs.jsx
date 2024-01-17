@@ -22,7 +22,7 @@ export const AboutUs = () => {
 			<section className={styles.section}>
 				<div className={styles.section__commitment}>
 					<div className={styles.section__CommitmentImg}></div>
-					<div>
+					<div className={styles.section__CommitmentDescription}>
 						<h2 className={styles.section__titleDark}>Our commitment</h2>
 						<p className={styles.section__textDark}>
 							We’re built on a simple mission and a commitment to doing good
@@ -36,7 +36,7 @@ export const AboutUs = () => {
 							offer training, support farm community initiatives, and invest in
 							coffee plant science. Curating only the finest blends, we roast
 							each lot to highlight tasting profiles distinctive to their native
-							growing region. Uncompromising
+							growing region.
 						</p>
 					</div>
 				</div>

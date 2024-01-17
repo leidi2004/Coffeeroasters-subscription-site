@@ -6,48 +6,55 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-    gap: 5rem;
+	gap: 5rem;
+
 	&__title {
 		font-size: clamp(1.5rem, 4.2vw, 2rem);
 		color: #848990;
 
-        @media (min-width: 766px) {
-            text-align: left;
-            align-self: flex-start;
-        }
+		@media (min-width: 766px) {
+			text-align: left;
+			align-self: flex-start;
+		}
 	}
 
-    &__cardList{
-        @media (min-width: 766px) {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            gap: 3rem;
+	&__cardList {
+		align-self: start;
+		width: 100%;
+		@media (min-width: 766px){
+			display: flex;
+			flex-direction: row;
+			gap: 5rem;
+		}
+        @media (min-width: 1024px){
+            width: 80%;
         }
-    }
+
+	}
 }
 
 .card {
 	line-height: 2.1;
-    margin-bottom: 5rem;
-
+	margin-bottom: 5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	&__img {
-		margin: 0 auto 3rem auto;
-        width: 35%;
-        max-width: 250px;
-        height: 60px;
+		margin: 3rem 0;
+		width: 100%;
 	}
 
-    &__content{
-        height: 240px;
-    }
+	&__content {
+		height: 240px;
+	}
 
 	&__title {
 		color: #052b2c;
 		font-family: 'Fraunces', serif;
-        font-weight: 700;
-        font-size: 1.4rem;
-
+		font-weight: 700;
+		font-size: 1.4rem;
 	}
 
 	&__text {
@@ -55,8 +62,8 @@
 		color: #333d4b;
 	}
 
-    @media (min-width: 766px) {
-        margin-bottom: 0;
-        text-align: left;
-    }
+	@media (min-width: 766px) {
+		margin-bottom: 0;
+		text-align: left;
+	}
 }

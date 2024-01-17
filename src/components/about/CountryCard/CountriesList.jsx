@@ -52,19 +52,21 @@ export const CountriesList = () => {
 export const CountryCard = ({ country }) => {
 	return (
 		<div className={styles.card}>
-			<img src={country.img} alt='country image' className={styles.card__img} />
+			<div>
+				<img
+					src={country.img}
+					alt='country image'
+					className={styles.card__img}
+				/>
+			</div>
 			<div className={styles.card__content}>
 				<p className={styles.card__title}>{country.country}</p>
 				<p className={styles.card__text}>{country.address}</p>
+				<p className={styles.card__text}>{country.city + ' '}</p>
+				<p>{country.country === 'United Kingdom' && country.postalCode}</p>
 				<p className={styles.card__text}>
-					{country.city + " "}
-				</p>
-                <p>
-                    {country.country === "United Kingdom" && country.postalCode}
-                </p>
-				<p className={styles.card__text}>
-					{country.province && country.province + " "}
-                    {country.country === "Canada" && country.postalCode}
+					{country.province && country.province + ' '}
+					{country.country === 'Canada' && country.postalCode}
 				</p>
 				<p className={styles.card__text}>{country.phoneNumber}</p>
 			</div>
