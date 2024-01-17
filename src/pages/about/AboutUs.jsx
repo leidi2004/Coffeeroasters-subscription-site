@@ -8,36 +8,41 @@ export const AboutUs = () => {
 			<Nav />
 			<section className={styles.section}>
 				<div className={styles.section__container}>
-					<h1 className={styles.section__title}>About us</h1>
-					<p className={styles.section__text}>
-						Coffeeroasters began its journey of exotic discovery in 1999,
-						highlighting stories of coffee from around the world. We have since
-						been dedicated to bring the perfect cup - from bean to brew - in
-						every shipment.
-					</p>
+					<div className={styles.section__AboutUs}>
+						<h1 className={styles.section__title}>About us</h1>
+						<p className={styles.section__text}>
+							Coffeeroasters began its journey of exotic discovery in 1999,
+							highlighting stories of coffee from around the world. We have
+							since been dedicated to bring the perfect cup - from bean to brew
+							- in every shipment.
+						</p>
+					</div>
 				</div>
 			</section>
 			<section className={styles.section}>
-				<div className={styles.section__CommitmentImg}></div>
-				<h2 className={styles.section__titleDark}>Our commitment</h2>
-				<p className={styles.section__textDark}>
-					We’re built on a simple mission and a commitment to doing good along
-					the way. We want to make it easy for you to discover and brew the
-					world’s best coffee at home. It all starts at the source. To locate
-					the specific lots we want to purchase, we travel nearly 60 days a year
-					trying to understand the challenges and opportunities in each of these
-					places. We collaborate with exceptional coffee growers and empower a
-					global community of farmers through with well above fair-trade
-					benchmarks. We also offer training, support farm community
-					initiatives, and invest in coffee plant science. Curating only the
-					finest blends, we roast each lot to highlight tasting profiles
-					distinctive to their native growing region. Uncompromising
-				</p>
+				<div className={styles.section__commitment}>
+					<div className={styles.section__CommitmentImg}></div>
+					<div>
+						<h2 className={styles.section__titleDark}>Our commitment</h2>
+						<p className={styles.section__textDark}>
+							We’re built on a simple mission and a commitment to doing good
+							along the way. We want to make it easy for you to discover and
+							brew the world’s best coffee at home. It all starts at the source.
+							To locate the specific lots we want to purchase, we travel nearly
+							60 days a year trying to understand the challenges and
+							opportunities in each of these places. We collaborate with
+							exceptional coffee growers and empower a global community of
+							farmers through with well above fair-trade benchmarks. We also
+							offer training, support farm community initiatives, and invest in
+							coffee plant science. Curating only the finest blends, we roast
+							each lot to highlight tasting profiles distinctive to their native
+							growing region. Uncompromising
+						</p>
+					</div>
+				</div>
 			</section>
 			<section className={styles.section}>
-				<div className={styles.section__CoffeeImg}>
-
-				</div>
+				<div className={styles.section__CoffeeImg}></div>
 				<div className={styles.section__QualityContent}>
 					<h3 className={styles.section__title}>Uncompromising quality</h3>
 					<p className={styles.section__text}>
@@ -51,7 +56,7 @@ export const AboutUs = () => {
 				</div>
 			</section>
 			<section className={styles.section}>
-				<CountriesList/>
+				<CountriesList />
 			</section>
 			<Footer />
 		</main>

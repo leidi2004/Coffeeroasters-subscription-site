@@ -1,5 +1,10 @@
 .section {
 	margin-bottom: 3rem;
+	text-align: center;
+
+	@media (min-width: 766px) {
+		margin-bottom: 17rem;
+	}
 
     &__container, &__CommitmentImg, &__CoffeeImg, &__QualityContent{
 		width: 100%;
@@ -14,19 +19,19 @@
 		background-image: url(../../assets/img/about/mobile/image-hero-whitecup.jpg);
 		color: #f0f1f1;
 
-		@media (min-width: 765px) and (max-width: 1023px) {
+		@media (min-width: 766px) and (max-width: 1023px) {
 			background-image: url(../../assets/img/about/tablet/image-hero-whitecup.jpg);
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/image-hero-whitecup.jpg);
 		}
+
+		@media (min-width: 766px) {
+			text-align: left;
+		}
 	}
 
-	&__title,
-	&__text, &__titleDark,
-	&__textDark {
-		text-align: center;
-	}
+	
 
 	&__title, &__titleDark{
 		font-size: clamp(1.8rem, 5vw, 2.3rem);
@@ -35,26 +40,39 @@
 
 	&__text, &__textDark{
 		line-height: 1.5;
+		font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+
 	}
 
 	&__titleDark{
 		color: #052b2c;
+
 	}
 
 	&__textDark {
 		color: #333d4b;
 		font-weight: lighter;
+		@media (min-width: 766px) {
+			max-width: 300px;
+		}
+
 	}
 
     &__CommitmentImg{
         height: 200vh;
 		background-image: url(../../assets/img/about/mobile/image-commitment.jpg);
         margin-bottom: 3.5rem;
-		@media (min-width: 765px) and (max-width: 1023px) {
+		@media (min-width: 766px) and (max-width: 1023px) {
 			background-image: url(../../assets/img/about/tablet/image-commitment.jpg);
+			background-position: top;
+			max-height: 510px;
+			margin: auto;
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/image-commitment.jpg);
+		}
+		@media (min-width: 766px){
+			width: 50%;
 		}
     }
 
@@ -68,8 +86,10 @@
 		position: absolute;
   		left: 50%;
   		transform: translate(-50%, -50%);
-		@media (min-width: 765px) and (max-width: 1023px) {
+		@media (min-width: 766px) and (max-width: 1023px) {
 			background-image: url(../../assets/img/about/tablet/image-quality.jpg);
+			width: 60%;
+			padding: 8rem 0;
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/image-quality.jpg);
@@ -80,8 +100,10 @@
 		color: #f0f1f1;
 		padding: 9.5rem 1rem 3rem 1rem;
 		background-image: url(../../assets/img/about/mobile/bg-quality.png);
-		@media (min-width: 765px) and (max-width: 1023px) {
+		
+		@media (min-width: 766px) and (max-width: 1023px) {
 			background-image: url(../../assets/img/about/tablet/bg-quality.png);
+			padding-top: 14rem;
 		}
         @media (min-width: 1024px) {
 			background-image: url(../../assets/img/about/desktop/bg-quality.png)
@@ -89,8 +111,27 @@
 		}
 	}
 
+	&__AboutUs{
+		@media (min-width: 766px){
+			max-width: 500px;
+		}
+	}
+
+	&__commitment{
+		@media (min-width: 766px) {
+			display: flex;
+			gap: 2.2rem;
+			text-align: left;
+			align-items: center;
+		}
+	}
+
 }
 
 .section:nth-child(3), .section:nth-child(4){
 	margin-bottom: 8rem;
+
+	@media (min-width: 766px) {
+		margin-bottom: 17rem;
+	}
 }

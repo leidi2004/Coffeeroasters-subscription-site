@@ -32,7 +32,7 @@ export const CountriesList = () => {
 			country: 'Australia',
 			address: '36 Swanston Street',
 			city: 'Kewell',
-			providence: 'Victoria',
+			province: 'Victoria',
 			phoneNumber: '+61 4 9928 3629',
 		},
 	];
@@ -40,9 +40,11 @@ export const CountriesList = () => {
 		<div className={styles.container}>
 			<h4 className={styles.container__title}>Our headquarters</h4>
 
-			{countries.map(country => (
-				<CountryCard country={country} key={country.id} />
-			))}
+			<div className={styles.container__cardList}>
+				{countries.map(country => (
+					<CountryCard country={country} key={country.id} />
+				))}
+			</div>
 		</div>
 	);
 };
@@ -51,15 +53,21 @@ export const CountryCard = ({ country }) => {
 	return (
 		<div className={styles.card}>
 			<img src={country.img} alt='country image' className={styles.card__img} />
-			<p className={styles.card__title}>{country.country}</p>
-			<p className={styles.card__text}>{country.address}</p>
-			<p className={styles.card__text}>{country.city}</p>
-			<p className={styles.card__text}>
-				{country.province &&
-					country.province + ' ' + country.postalCode &&
-					country.postalCode}
-			</p>
-			<p className={styles.card__text}>{country.phoneNumber}</p>
+			<div className={styles.card__content}>
+				<p className={styles.card__title}>{country.country}</p>
+				<p className={styles.card__text}>{country.address}</p>
+				<p className={styles.card__text}>
+					{country.city + " "}
+				</p>
+                <p>
+                    {country.country === "United Kingdom" && country.postalCode}
+                </p>
+				<p className={styles.card__text}>
+					{country.province && country.province + " "}
+                    {country.country === "Canada" && country.postalCode}
+				</p>
+				<p className={styles.card__text}>{country.phoneNumber}</p>
+			</div>
 		</div>
 	);
 };
@@ -71,7 +79,7 @@ CountryCard.propTypes = {
 		address: PropTypes.string,
 		city: PropTypes.string,
 		province: PropTypes.string,
-        postalCode: PropTypes.string,
+		postalCode: PropTypes.string,
 		phoneNumber: PropTypes.string,
 	}),
 };
