@@ -6,6 +6,7 @@
         font-size: 1.7rem;
         color: #747979;
 
+
         @media (min-width: 767px){
             text-align: left;
         }   
@@ -81,8 +82,16 @@
         display: inline-block;
         width: 30%;
         text-align: center;
-        border: solid #fdd6ba 1px;
-        
+        border: solid #fdd6ba 1px; 
     }
+}
+
+.darkSection{
+    
+    border-radius: 0.6rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../../../assets/img/plan/mobile/bg-steps.png);
 }
 

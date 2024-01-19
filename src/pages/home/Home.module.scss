@@ -2,26 +2,20 @@
 	margin-bottom: 4rem;
 	padding: 4.4rem 1rem;
 	border-radius: 0.6rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	@media (max-width: 425px) {
-		background-image: url(../../assets/img/home/mobile/image-hero-coffeepress.jpg);
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
+		background-image: url(../../assets/img/home/mobile/image-hero-coffeepress.jpg);	
 	}
 
 	@media (min-width: 426px) and (max-width: 1023px) {
 		background-image: url(../../assets/img/home/tablet/image-hero-coffeepress.jpg);
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
 	}
 
 	@media (min-width: 1024px){
 		background-image: url(../../assets/img/home/desktop/image-hero-coffeepress.jpg);
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
 	}
 }
 

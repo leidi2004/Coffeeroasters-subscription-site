@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import styles from './Steps.module.scss';
-export const Steps = () => {
+
+export const Steps = ({change}) => {
 	const steps = [
 		{
 			number: '01',
@@ -23,9 +24,12 @@ export const Steps = () => {
 				'We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.',
 		},
 	];
+
+	const sectionClassCondition = change ? styles.darkSection : styles.containerCards;
+
 	return (
 		<section className={styles.section}>
-			<h3 className={styles.section__title}>How it works</h3>
+			{!change && <h3 className={styles.section__title}>How it works</h3>}
 			<div className={styles.container}>
 				<span className={styles.container__circle}></span>
 				<span className={styles.container__line}></span>
@@ -33,16 +37,18 @@ export const Steps = () => {
 				<span className={styles.container__line}></span>
 				<span className={styles.container__circle}></span>
 			</div>
-			<div className={styles.containerCards}>
+			<div className={sectionClassCondition}>
 				{steps.map(step => (
-					<StepCard step={step} key={step.number} />
+					<StepCard step={step} key={step.number} change={change} />
 				))}
 			</div>
 		</section>
 	);
 };
 
-const StepCard = ({ step }) => {
+const StepCard = ({ step, change }) => {
+	const textClassCondition = change ? styles.whiteNumber : styles.number;
+
 	return (
 		<div className={styles.card}>
 			<p className={styles.card__number}>{step.number}</p>
@@ -58,4 +64,10 @@ StepCard.propTypes = {
 		step: PropTypes.string.isRequired,
 		instruction: PropTypes.string.isRequired,
 	}),
+
+	change: PropTypes.bool
 };
+
+Steps.propTypes = {
+	change: PropTypes.bool
+}

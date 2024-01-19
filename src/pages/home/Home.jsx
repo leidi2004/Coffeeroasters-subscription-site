@@ -74,55 +74,59 @@ export const Home = () => {
 	];
 
 	return (
-		<main>
+		<>
 			<Nav />
-			<section className={styles.section}>
-				<div className={styles.content}>
-					<h1 className={styles.content__title}>Great coffee made simple.</h1>
-					<p className={styles.content__text}>
-						Start your mornings with the world’s best coffees. Try our expertly
-						curated artisan coffees from our best roasters delivered directly to
-						your door, at your schedule.
-					</p>
-					<ButtonCreatePlan />
-				</div>
-			</section>
-			<section className={styles.test}>
-				<div className={styles.titleContainer}>
-					<div className={styles.titleShadow}></div>
-					<h3 className={styles.coffeeList__title}>our collection</h3>
-				</div>
-				<div className={styles.coffeeList}>
-					{coffees.map(coffee => (
-						<CoffeeCard coffee={coffee} key={coffee.id} />
-					))}
-				</div>
-			</section>
-			<section className={styles.reasonsSection}>
-				<article className={styles.article}>
-					<h2 className={styles.article__title}>Why choose us?</h2>
-					<p className={styles.article__text}>
-						A large part of our role is choosing which particular coffees will
-						be featured in our range. This means working closely with the best
-						coffee growers to give you a more impactful experience on every
-						level.
-					</p>
-				</article>
-				<div className={styles.cardContainer}>
-					<div className={styles.wrapper}>
-						{reasons.map(reason => (
-							<ReasonCard reason={reason} key={reason.id} />
+			<main>
+				<section className={styles.section}>
+					<div className={styles.content}>
+						<h1 className={styles.content__title}>Great coffee made simple.</h1>
+						<p className={styles.content__text}>
+							Start your mornings with the world’s best coffees. Try our
+							expertly curated artisan coffees from our best roasters delivered
+							directly to your door, at your schedule.
+						</p>
+						<ButtonCreatePlan />
+					</div>
+				</section>
+				<section className={styles.test}>
+					<div className={styles.titleContainer}>
+						<div className={styles.titleShadow}></div>
+						<h3 className={styles.coffeeList__title}>our collection</h3>
+					</div>
+					<div className={styles.coffeeList}>
+						{coffees.map(coffee => (
+							<CoffeeCard coffee={coffee} key={coffee.id} />
 						))}
 					</div>
+				</section>
+				<section className={styles.reasonsSection}>
+					<article className={styles.article}>
+						<h2 className={styles.article__title}>Why choose us?</h2>
+						<p className={styles.article__text}>
+							A large part of our role is choosing which particular coffees will
+							be featured in our range. This means working closely with the best
+							coffee growers to give you a more impactful experience on every
+							level.
+						</p>
+					</article>
+					<div className={styles.cardContainer}>
+						<div className={styles.wrapper}>
+							{reasons.map(reason => (
+								<ReasonCard reason={reason} key={reason.id} />
+							))}
+						</div>
+					</div>
+				</section>
+				<section>
+					<Steps />
+				</section>
+				<div className={styles.buttonContainer}>
+					<ButtonCreatePlan />
 				</div>
-			</section>
-			<section>
-				<Steps />
-			</section>
-			<div className={styles.buttonContainer}>
-				<ButtonCreatePlan />
+			</main>
+			<div className='padding'>
+				<Footer />
 			</div>
-			<Footer />
-		</main>
+		</>
 	);
 };
