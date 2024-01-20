@@ -1,39 +1,45 @@
 .section {
 	padding: 1rem;
-	&__createPlan {
-		margin-bottom: 5rem;
-		padding: 8rem 2rem;
-		border-radius: 0.6rem;
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		color: #f0f1f1;
+}
 
-		&__content{
-			width: 100%;
+.createPlan {
+	margin-bottom: 5rem;
+	padding: 8rem 2rem;
+	border-radius: 0.6rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #f0f1f1;
+
+	&__content{
+		width: 100%;
+
+		@media (min-width: 767px) {
+			max-width: 400px;
 		}
+	}
 
-		&__title{
-			margin-bottom: 2rem;
-		}
+	&__title{
+		font-size: clamp(2rem, 7vw, 4rem);
+		margin-bottom: 1.5rem;
+	}
 
-		&__text{
+	&__text{
+		line-height: 1.5;
+	}
 
-		}
+	@media (max-width: 425px) {
+		background-image: url(../../assets/img/plan/mobile/image-hero-blackcup.jpg);
+		text-align: center;
+	}
 
-		@media (max-width: 425px) {
-			background-image: url(../../assets/img/plan/mobile/image-hero-blackcup.jpg);
-			text-align: center;
-		}
+	@media (min-width: 426px) and (max-width: 1023px) {
+		background-image: url(../../assets/img/plan/tablet/image-hero-blackcup.jpg);
+	}
 
-		@media (min-width: 426px) and (max-width: 1023px) {
-			background-image: url(../../assets/img/plan/tablet/image-hero-blackcup.jpg);
-		}
-
-		@media (min-width: 1024px) {
-			background-image: url(../../assets/img/plan/desktop/image-hero-blackcup.jpg
-			);
-		}
+	@media (min-width: 1024px) {
+		background-image: url(../../assets/img/plan/desktop/image-hero-blackcup.jpg
+		);
 	}
 }
 

@@ -8,7 +8,7 @@ export const CreatePlan = () => {
 		<div>
 			<Nav />
 			<section className={styles.section}>
-				<div className={styles.section__createPlan}>
+				<div className={styles.createPlan}>
 					<div className={styles.createPlan__content}>
 						<h1 className={styles.createPlan__title}>Create a plan</h1>
 						<p className={styles.createPlan__text}>
