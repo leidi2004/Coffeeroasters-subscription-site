@@ -28,7 +28,7 @@ export const Steps = ({change}) => {
 	const sectionClassCondition = change ? styles.darkSection : styles.containerCards;
 
 	return (
-		<section className={styles.section}>
+		<section className={sectionClassCondition}>
 			{!change && <h3 className={styles.section__title}>How it works</h3>}
 			<div className={styles.container}>
 				<span className={styles.container__circle}></span>
@@ -37,7 +37,7 @@ export const Steps = ({change}) => {
 				<span className={styles.container__line}></span>
 				<span className={styles.container__circle}></span>
 			</div>
-			<div className={sectionClassCondition}>
+			<div className={styles.containerCards}>
 				{steps.map(step => (
 					<StepCard step={step} key={step.number} change={change} />
 				))}
@@ -47,13 +47,15 @@ export const Steps = ({change}) => {
 };
 
 const StepCard = ({ step, change }) => {
-	const textClassCondition = change ? styles.whiteNumber : styles.number;
+	
+	const titleClassCondition = change ? styles.card__lightTitle : styles.card__title;
+	const textClassCondition = change ? styles.card__lightText : styles.card__text;
 
 	return (
 		<div className={styles.card}>
 			<p className={styles.card__number}>{step.number}</p>
-			<h3 className={styles.card__title}>{step.step}</h3>
-			<p className={styles.card__text}>{step.instruction}</p>
+			<h3 className={titleClassCondition}>{step.step}</h3>
+			<p className={textClassCondition}>{step.instruction}</p>
 		</div>
 	);
 };

@@ -19,10 +19,10 @@ export const CreatePlan = () => {
 					</div>
 				</div>
 			</section>
-			<section>
+			<section className={styles.sectionPadding}>
 				<Steps change={true} />
 			</section>
-			<div>
+			<div className="padding">
 				<Footer />
 			</div>
 		</div>

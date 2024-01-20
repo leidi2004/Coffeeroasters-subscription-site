@@ -13,9 +13,11 @@
 
 	&__content{
 		width: 100%;
+		text-align: center;
 
 		@media (min-width: 767px) {
 			max-width: 400px;
+			text-align: left;
 		}
 	}
 
@@ -30,7 +32,6 @@
 
 	@media (max-width: 425px) {
 		background-image: url(../../assets/img/plan/mobile/image-hero-blackcup.jpg);
-		text-align: center;
 	}
 
 	@media (min-width: 426px) and (max-width: 1023px) {
@@ -72,5 +73,11 @@
 		font-size: 0.9rem;
 		color: #bec5c5;
 		line-height: 1.5;
+	}
+}
+
+.sectionPadding{
+	@media (min-width: 766px){
+		padding: 1rem;
 	}
 }
