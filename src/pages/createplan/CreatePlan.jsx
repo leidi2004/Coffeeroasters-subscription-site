@@ -1,6 +1,7 @@
 import { Footer } from '../../components/common/Footer/Footer';
 import { Nav } from '../../components/common/Nav/Nav';
 import { Steps } from '../../components/common/StepsCard/Steps';
+import { QuestionList } from '../../components/createplan/QuestionCard/QuestionList';
 
 import styles from './CreatePlan.module.scss';
 export const CreatePlan = () => {
@@ -21,6 +22,9 @@ export const CreatePlan = () => {
 			</section>
 			<section className={styles.sectionPadding}>
 				<Steps change={true} />
+			</section>
+			<section>
+				<QuestionList/>
 			</section>
 			<div className="padding">
 				<Footer />

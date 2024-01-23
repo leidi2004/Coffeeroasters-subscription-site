@@ -1,0 +1,29 @@
+.article{
+    margin: 5rem 2rem 2rem 2rem;
+}
+
+.questionCard{
+    margin-bottom: 2rem;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3rem;
+
+    }
+
+    &__question{
+        color: #9c9e9e;
+        font-family: 'Fraunces', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__button{
+        border: none;
+        background-color: inherit;
+        width: 10%;
+        padding: 0.8rem;
+        max-width: 20px;
+    }
+}
