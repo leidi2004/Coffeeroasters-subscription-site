@@ -7,7 +7,7 @@
     &__container{
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         gap: 3rem;
 
     }
@@ -22,8 +22,16 @@
     &__button{
         border: none;
         background-color: inherit;
-        width: 10%;
+        width: 100%;
         padding: 0.8rem;
-        max-width: 20px;
+        max-width: 60px;
+        object-fit: fill;
     }
+}
+
+
+
+.questionCard__button path:hover {
+	transition: all 0.8s 0.1s ease-in;
+    fill: #7edfdd;
 }

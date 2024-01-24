@@ -133,28 +133,13 @@ export const QuestionList = () => {
 
 const QuestionCard = ({ question }) => {
 	const [answers, setAnswers] = useState(false);
+
 	return (
 		<section className={styles.questionCard}>
 			<div className={styles.questionCard__container}>
 				<p className={styles.questionCard__question}>{question.question}</p>
 				<button className={styles.questionCard__button}>
-					{!answers ? 
-						<svg
-						aria-hidden='true'
-						focusable='false'
-						data-prefix='fas'
-						data-icon='chevron-up'
-						className='svg-inline--fa fa-chevron-up fa-w-14'
-						role='img'
-						xmlns='http://www.w3.org/2000/svg'
-						viewBox='0 0 448 512'
-					>
-						<path
-							fill='#0E8784'
-							d='M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z'
-						></path>
-					</svg>
-					 : 
+					{answers === true && (
 						<svg
 							aria-hidden='true'
 							focusable='false'
@@ -170,7 +155,15 @@ const QuestionCard = ({ question }) => {
 								d='M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z'
 							></path>
 						</svg>
-					}
+					)}
+					{answers === false && (
+						<svg width='19' height='13' xmlns='http://www.w3.org/2000/svg'>
+							<path
+								d='M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z'
+								fill='#0E8784'
+							/>
+						</svg>
+					)}
 				</button>
 			</div>
 		</section>
@@ -179,11 +172,11 @@ const QuestionCard = ({ question }) => {
 
 QuestionCard.propTypes = {
 	question: PropTypes.shape({
-		question: PropTypes.string.required,
+		question: PropTypes.string.isRequired,
 		answers: PropTypes.arrayOf(
 			PropTypes.shape({
-				answers: PropTypes.string.isRequired,
-				description: PropTypes.string.isRequired,
+				answers: PropTypes.string,
+				description: PropTypes.string,
 			})
 		),
 	}),
