@@ -1,0 +1,28 @@
+.card{
+    background-color: #f4f1ef;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: #333d4b;
+
+
+    &__title{
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description{
+        line-height: 1.5;
+        font-weight: 300;
+    }
+
+    &__active{
+        @extend .card;
+	    background-color: #0e8784;
+        color: #fff;
+    }
+
+    &:hover{
+        background-color: #fdd6ba;
+        cursor: pointer;
+    }
+}

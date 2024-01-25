@@ -2,6 +2,7 @@ import { PropTypes } from 'prop-types';
 import { v4 as randomId } from 'uuid';
 import styles from './QuestionList.module.scss';
 import { useState } from 'react';
+import { OptionCard } from '../OptionCard/OptionCard';
 
 export const QuestionList = () => {
 	const questions = [
@@ -132,14 +133,16 @@ export const QuestionList = () => {
 };
 
 const QuestionCard = ({ question }) => {
-	const [answers, setAnswers] = useState(false);
+	const [answers, setAnswers] = useState(true);
+	
+	const answerContainerClass = answers ? styles.answerContainer__display : styles.answerContainer__hide;
 
 	return (
 		<section className={styles.questionCard}>
 			<div className={styles.questionCard__container}>
 				<p className={styles.questionCard__question}>{question.question}</p>
 				<button className={styles.questionCard__button}>
-					{answers === true && (
+					{!answers && (
 						<svg
 							aria-hidden='true'
 							focusable='false'
@@ -156,7 +159,7 @@ const QuestionCard = ({ question }) => {
 							></path>
 						</svg>
 					)}
-					{answers === false && (
+					{answers && (
 						<svg width='19' height='13' xmlns='http://www.w3.org/2000/svg'>
 							<path
 								d='M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z'
@@ -165,6 +168,9 @@ const QuestionCard = ({ question }) => {
 						</svg>
 					)}
 				</button>
+			</div>
+			<div className={answerContainerClass}>
+				{question.answers.map((answer)=>(<OptionCard answer={answer} key={answer.id}/>))}
 			</div>
 		</section>
 	);
@@ -175,9 +181,9 @@ QuestionCard.propTypes = {
 		question: PropTypes.string.isRequired,
 		answers: PropTypes.arrayOf(
 			PropTypes.shape({
-				answers: PropTypes.string,
+				answer: PropTypes.string,
 				description: PropTypes.string,
-			})
+			})	
 		),
 	}),
 };
