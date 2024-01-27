@@ -1,0 +1,28 @@
+.section{
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.card{
+    background-color: #293039;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    &__title{
+        font-weight: 100;
+    	font-family: 'Barlow', sans-serif;
+        color: #9c9e9e;
+        margin-bottom: 0.7rem;
+    }
+
+    &__text{
+        font-family: 'Fraunces', serif !important;
+        color: #f0f1f1;
+        line-height: 1.5;
+    }
+
+    &__span{
+        font-family: 'Fraunces', serif;
+        color: #0e8784;
+    }
+}
+

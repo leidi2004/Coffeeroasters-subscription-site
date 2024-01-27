@@ -43,6 +43,11 @@
     gap: 1rem;
     margin: 2rem auto;
     transition: opacity 0.5s 0.3s ease-in;
+
+    @media (min-width: 767px){
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .answerContainer__hide{
