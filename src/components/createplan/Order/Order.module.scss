@@ -1,12 +1,38 @@
 .section{
     margin-top: 5rem;
     padding: 1rem;
+
+    &__button{
+        display: block;
+        border: none;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 70%;
+        max-width: 200px;
+        font-size: 1rem;
+        text-align: center;
+        background-color: #0e8784;
+        color: #f0f1f1;
+        margin: auto;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background-color: darkturquoise;
+            transition: all 0.5s 0.5s ease-in-out;
+        }
+
+    }
 }
 
 .card{
     background-color: #293039;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: 0.5rem;
+    font-size: 1.4rem;
+    margin: 0 auto 3rem auto;
+    width: 90%;
+
     &__title{
         font-weight: 100;
     	font-family: 'Barlow', sans-serif;
